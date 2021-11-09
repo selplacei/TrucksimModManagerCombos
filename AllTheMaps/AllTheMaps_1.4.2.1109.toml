@@ -1,5 +1,5 @@
 name = "AllTheMaps"
-version = "1.42.1109"
+version = "1.42.02"
 game = "ets2"
 game_version = "1.42.*"
 description = '''
@@ -9,6 +9,8 @@ All credit for making and testing the load order goes to Vinnie Terranova.
 This combo does not include English localization mods.
 '''
 author = "selplacei"
+source = "https://raw.githubusercontent.com/selplacei/TrucksimModManagerCombos/main/AllTheMaps/current"
+version_check = "https://raw.githubusercontent.com/selplacei/TrucksimModManagerCombos/main/AllTheMaps/version"
 
 [mods.equivalents]
     # If one of the equivalents is a list, its contents must be ordered by load order from highest to lowest
