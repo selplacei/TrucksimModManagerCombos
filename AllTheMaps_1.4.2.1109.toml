@@ -1,0 +1,266 @@
+name = "AllTheMaps"
+version = "1.42.1102"
+game = "ets2"
+game_version = "1.42.*"
+description = '''
+All major compatible map mods.
+Based on https://forum.scssoft.com/viewtopic.php?t=293794
+All credit for making and testing the load order goes to Vinnie Terranova.
+This combo does not include English localization mods.
+'''
+author = "selplacei"
+
+[mods.equivalents]
+    # If one of the equivalents is a list, its contents must be ordered by load order from highest to lowest
+    # Currently, the mods of multiple-mod Equivalents must be directly next to each other in the final order
+    Background = [
+        ["Background_crash_fix", "Satellite_background"],
+        ["Background_crash_fix", "SCS_style_background"],
+        ["Background_crash_fix", "SCS_thin_style_background"],
+        "Promods_Afroeurasia_background"
+    ]
+    ProMods-RusMap_connection = [
+        "ProMods-RusMap_connection_vRusMap",
+        "ProMods-RusMap_connection_vProMods"
+    ]
+
+[mods.names]
+    # Optional - if not specified, the normal name is used with underscores replaced by spaces
+    ProMods-RusMap_connection_vRusMap = "ProMods-RusMap connection (RusMap Murmansk)"
+    ProMods-RusMap_connection_vProMods = "ProMods-RusMap connection (ProMods Murmansk)"
+    Bergs_ferrymod = "Berg's ferrymod"
+    Finnmark = "Finnmark mod - Troms"
+    Corfu_and_the_Greek_Islands = "Corfu & the Greek Islands"
+
+[mods.descriptions]
+
+[mods.images]
+    # Can be a string or a list. Must link directly to .jpg, .png, or .gif image(s).
+
+[mods.filenames]
+    # Must be a string. For multipart archives, list them as a single entry with either a .7z or .zip extension
+    # Filenames can be automatically detected from Sharemods links and don't have to be specified here
+    # For mods that have multiple files, individual filenames are specified in [mods.order]
+    Background_crash_fix = "CRASHFIX_HUGE_COMBOS.scs"
+    Satellite_background = "ETS2_LAMB_EU-AF-AS-OC_SAT_BG_v1.2_unzip_me.zip"
+    SCS_style_background = "ETS2_LAMB_EU-AF-AS-OC_PLAIN_BG_v1.2_unzip_me.zip"
+    SCS_thin_style_background = "ETS2_LAMB_EU-AF-AS-OC_THIN_BG_v1.2_unzip_me.zip"
+    Promods_Afroeurasia_background = "promods-afroeurasia-background.scs"
+    Ireland_map = "Extract Me IREMAP 0.1.1.zip"
+    Jan_Mayen_addon = "Jan-Mayen-Beta-0.2.1.scs"
+    RusMap = "RusMap_2.4.2.7z"
+    Finnmark = "finnmark_v1635263572.zip"
+
+[mods.special]
+    # extract: .zip or .7z file that contains one or more .scs files
+    # update: .scs file(s) whose manifest.sii must be edited to accept the newer `game_version`
+    # Entries can be mod names or filenames in the same format as in [mods.order]
+    # If a mod is included in both, all .scs files within the archive will be updated
+    extract = [
+        "Satellite_background",
+        "SCS_style_background",
+        "SCS_thin_style_background",
+        "Ireland_map",
+        "Kirov",
+        "RusMap",
+        "Finnmark",
+        "Project_Balkans",
+        "North_Macedonia_rework",
+        "Poland_rebuilding",
+        "Southern_Region_hotfix",
+        "Southern_Region",
+        "The_Great_Steppe",
+        "Java_Road_Revolution_defmap_fix",
+        "Java_Road_Revolution",
+        "PJ_Indo_map"
+    ]
+    update = [
+        "Latvia_rebuild",
+        "AfroMap"
+    ]
+
+# Specify using the mod name optionally followed by a slash and a filename
+# If just the mod name is used, it must be a single file or an Equivalent
+# When listing contents of extracted downloads, use filenames of whatever is in the archive (unless there's only one)
+# Syntax for optional mods:
+# ["Feature or description", "File or mod to include if enabled or desired"(, "File or mod to include otherwise")]
+# ^ the part in parentheses is optional
+mods.order = [
+    "Background",
+    "Stuttgart_signs_fix",
+    "Tekirdag_rebuild",
+    "Swedish_islands",
+    "Paris_rebuild",
+    "MedEx-Viva_Malta_ferry",
+    "Iberian_ferries",
+    "Bergs_ferrymod",
+    "No_Black_Sea_ferries",
+    "Project_Caucasus_caps_fix",
+    "Project_Caucasus",
+    "AZGE_ProMods_ME_fix",
+    "AZGE-SR_RC",
+    "AZGE_addon",
+    "RoEX_PM_RM_PR_RC",
+    "RoEX_ME_RC",
+    "RoEX_Rhodes_fix",
+    "RoEX/RX28Fdefmap.scs",
+    "RoEX/RX28Fprefab.scs",
+    "RoEX/RX28Fmodel.scs",
+    "RoEX/RX28Fmodel2.scs",
+    "RoEX/RX28Fassets.scs",
+    "Ireland_map",
+    "Jan_Mayen_addon",
+    "Emden_addon",
+    "Project_Greenland_PM_ferry",
+    "Project_Greenland",
+    "PM_Rhodes_ferry",
+    "Rhodes",
+    "Viva_Malta",
+    "Kirov_caps_fix",
+    "Kirov/kirov1_map.scs",
+    "Kirov/kirov1_models.scs",
+    "SZM_addon",
+    "ProMods-RusMap_connection",
+    "RusMap/RusMap-map_v2.4.2.scs",
+    "RusMap/RusMap-model_v2.4.2.scs",
+    "RusMap/RusMap-model2_v2.4.2.scs",
+    "MedEx",
+    "MedMap_PM_ME_fix",
+    "MedMap_PM_fix",
+    "MedMap",
+    "Red_Sea/Redsea_1-3-2.scs",
+    "Red_Sea/Redsea_Assets_1-3-2.scs",
+    "Finnmark",
+    "Latvia_rebuild",
+    "Durres-Bar_ferry",
+    "Project_Balkans_def_fix",
+    "Project_Balkans_combo_fix",
+    "Project_Balkans/Project Balkans 5.1 - Def.scs",
+    "Project_Balkans/Project Balkans 5.1 - Map.scs",
+    "Project_Balkans/Project Balkans 5.1 - Assets.scs",
+    "MK_rework_PL_rebuilding_fix",
+    ["Special Transport DLC", "North_Macedonia_rework/Macedonia_rework_def_st.scs", "North_Macedonia_rework/Macedonia_rework_def.scs"],
+    "North_Macedonia_rework/Macedonia_rework_map.scs",
+    "North_Macedonia_rework/Macedonia_rework_mat&asset.scs",
+    ["Special Transport DLC", "Poland_rebuilding/zz_PL_Rebuilding_2.5.2_ST.scs"],
+    "Poland_rebuilding/z1_PL_Rebuilding_2.5.2_def.scs",
+    "Poland_rebuilding/z1_PL_Rebuilding_2.5.2_map.scs",
+    "Poland_rebuilding/z1_PL_Rebuilding_2.5.2_models.scs",
+    "Poland_rebuilding/z1_PL_Rebuilding_2.5.2_assets.scs",
+    "Israel-Lebanon_open_border",
+    "Maghreb_map/MaghrebMap_Def_01_Beta_hotfix.scs",
+    "ProMods_Middle_East/promods-me-defmap-v257.scs",
+    "ProMods_Middle_East/promods-me-assets-v257.scs",
+    "Corfu_and_the_Greek_Islands/Corfu_ProModsV101.scs",
+    "Corfu_and_the_Greek_Islands/Corfu_ModelsV101.scs",
+    "ProMods/promods-def-v257.scs",
+    "ProMods/promods-map-v257.scs",
+    "ProMods/promods-media-v257.scs",
+    "ProMods/promods-model1-v257.scs",
+    "ProMods/promods-model2-v257.scs",
+    "ProMods/promods-model3-v257.scs",
+    "ProMods/promods-assets-v257.scs",
+    "RusMap/RusMap-def_v2.4.2.scs",
+    "Volga_map/Volga_def_map.scs",
+    "Volga_map/Volga_model.scs",
+    "Southern_Region_hotfix",
+    "Southern_Region/SRmap_[Model1].scs",
+    "Southern_Region/SRmap_[Model2].scs",
+    "Sibir_map_timezone_fix",
+    "Sibir_map_caps_fix",
+    "Sibir_map/sibirmap2.1.2b.mapdef.scs",
+    "Sibir_map/sibirmap2.1.2b.model.scs",
+    "Road_to_Asia/Road_to_Asia_114.scs",
+    "Road_to_Asia/Road_to_Asia_Models_114.scs",
+    "Road_to_Asia/Road_to_Asia_Assets_114.scs",
+    "Road_to_Aral_caps_fix",
+    "Road_to_Aral",
+    "The_Great_Steppe/The Great Steppe-def-v2.0.scs",
+    "The_Great_Steppe/The Great Steppe-map-v2.0.scs",
+    "The_Great_Steppe/The Great Steppe-model-v2.0.scs",
+    "Maghreb_map/MaghrebMap_Def_01_Beta.scs",
+    "Maghreb_map/MaghrebMap_Model1_01_Beta.scs",
+    "Maghreb_map/MaghrebMap_Model1_02_Beta.scs",
+    "Maghreb_map/MaghrebMap_Model1_03_Beta.scs",
+    "AfroMap",
+    "Java_Road_Revolution_defmap_fix",
+    "Java_Road_Revolution/JRR_Assets&Models1.scs",
+    "Java_Road_Revolution/JRR_Assets&Models2.scs",
+    "PJ_Indo_map/PJ_Indo_Def&Map.scs",
+    "PJ_Indo_map/PJ_Indo_Assets&Models2.scs",
+    "PJ_Indo_map/PJ_Indo_Assets&Models1.scs"
+]
+
+[mods.links]
+    # Does not have to directly link to the file - user will download these manually
+    # Can be a list with multiple download links for separate files
+    # Prefixes (in any order): $ - premium download available; ! - requires an account; % - concurrent download limit
+    Background_crash_fix = "https://drive.google.com/file/d/15X_vhtinxMXZ6KKEZyxgxB-gUFINxALi/view"
+    Satellite_background = "https://drive.google.com/file/d/1RbzWJvkJdgOqjJ3W9JRdgpOgfxs8prHB/view"
+    SCS_style_background = "https://drive.google.com/file/d/1wSvBaKxmTan-6EmgNN6QiUnfinaUSnzz/view"
+    SCS_thin_style_background = "https://drive.google.com/file/d/1_-gdrAPncdxjrA5aqWE5Sb31-dVgCvfX/view"
+    ProMods_Afroeurasia_background = "!https://truckymods.io/euro-truck-simulator-2/ui/promods-complete-afroeurasia-background-map/download/latest"
+    Stuttgart_signs_fix = "https://sharemods.com/cqkchk82ni41/stuttgartsignfix.scs.html"
+    Tekirdag_rebuild = "https://sharemods.com/7wnlf3sgus5i/trm_10_139.scs.html"
+    Swedish_islands = "https://sharemods.com/886yypyc0qtt/SwedishIslandsMap_v1.10-Wombat.scs.html"
+    Paris_rebuild = "https://sharemods.com/cbebxw730igp/paris_rebuild_v3_0.scs.html"
+    MedEx-Viva_Malta_ferry = "https://sharemods.com/kuypvuhcte98/blazingcreeperx.MedEx_VivaMalta_FC.scs.html"
+    Iberian_ferries = "https://sharemods.com/xjopihjn76r6/blazingcreeperx.iberian_ferries_v1.3.scs.html"
+    Bergs_ferrymod = "https://sharemods.com/u62rzyzn3f7c/Bergs_Ferrymod.scs.html"
+    No_Black_Sea_ferries = "https://sharemods.com/b9oof32oflhp/NoBlackSeaFerries.scs.html"
+    Project_Caucasus_caps_fix = "https://sharemods.com/wo6qq23ffis9/blazingcreeperx.caucasus_caps_fix.scs.html"
+    Project_Caucasus = "https://sharemods.com/mbxckv54lk9h/Project_Caucasus.scs.html"
+    AZGE_ProMods_ME_fix = "https://sharemods.com/xnqcymay3h4o/AZGEPMPMMEfix.scs.html"
+    AZGE-SR_RC = "https://sharemods.com/gwv3zjeiukri/AZGESR101RC.scs.html"
+    AZGE_addon = "https://sharemods.com/3hadld6pri34/AZGEaddon_1.41.scs.html"
+    RoEX_PM_RM_PR_RC = "https://sharemods.com/m4ir1z9t6huc/RXallRM242PM256PR251hybRCv2.scs.html"
+    RoEX_ME_RC = "https://sharemods.com/ahy22lhobfcz/ROEXallME256RC.scs.html"
+    RoEX_Rhodes_fix = "https://sharemods.com/n9sb35ppq7yv/ROEX3RhodesFIX.scs.html"
+    RoEX = "http://roextended.ro/forum/viewtopic.php?f=16&t=2152"
+    Ireland_map = "https://drive.google.com/file/d/1VIq5TgZBdPjRTLUxqeCPFCD2uw3V8y0W/view"
+    Jan_Mayen_addon = "!https://truckymods.io/euro-truck-simulator-2/maps/jan-mayen-promods-addon/download/latest"
+    Emden_addon = "https://sharemods.com/x141ctbkcrge/blazingcreeperx.pm_emden_v5.scs.html"
+    Project_Greenland_PM_ferry = "https://www.promods.net/download/file.php?id=9967"
+    Project_Greenland = "https://sharemods.com/jmk9jxiom80c/Project_Greenland_0.20.7z.html"
+    PM_Rhodes_ferry = "https://sharemods.com/q9s4rzhpq1pg/PM_Rhodes_ferry.scs.html"
+    Rhodes = "https://sharemods.com/dst1tj5ldsen/Rhodes_1.0.scs.html"
+    Viva_Malta = "https://sharemods.com/fmqo9v91jnsx/Viva_Malta_v1.0.2_1.41.scs.html"
+    Kirov_caps_fix = "https://sharemods.com/1fhm4evvl14h/KirovCapsFix.scs.html"
+    Kirov = "https://sharemods.com/ib4x03ndpti3/kirov_1_0.zip.html"
+    SZM_addon = "https://sharemods.com/vatrveobjoqa/SZM_Addon_2.4.2.scs.html"
+    ProMods-RusMap_connection_vRusMap = "https://sharemods.com/1nrdq6z2zk6q/PM257_RM2.4.2_connect_vRusMap.scs.html"
+    ProMods-RusMap_connection_vProMods = "https://sharemods.com/zhxlo7ggsmcn/PM257_RM2.4.2_connect_vProMods.scs.html"
+    RusMap = "$https://promods.net/viewtopic.php?f=42&t=10186"
+    MedEx = "https://sharemods.com/gvbedzkrs8v2/Med_Expansion_1.3.scs.html"
+    MedMap_PM_ME_fix = "https://sharemods.com/vxxlm3aj02lz/MMPMMEFIX.scs.html"
+    MedMap_PM_fix = "https://sharemods.com/j6xm1621wxo8/MMPMFIX.scs.html"
+    MedMap = "https://sharemods.com/2pctim130kxa/MedMap_0.1_-_Def.scs.html"
+    Red_Sea = "$https://terramaps.net/download/view.php?game=red-sea&id=1"
+    Finnmark = "https://www.dropbox.com/s/rz2f5mpv2ipo4ji/finnmark_v1635263572.zip?dl=0"
+    Latvia_rebuild = "https://sharemods.com/880zmphrndk5/latvia_rebuild-v127-for-pm_v252.scs.html"
+    Durres-Bar_ferry = "https://sharemods.com/csivh2qz3amk/Durres-Bar.scs.html"
+    Project_Balkans_def_fix = "https://sharemods.com/k025pr8dwv9m/Project_Balkans_5.1_Def_Fix_for_Low-Spec_PCs.scs.html"
+    Project_Balkans_combo_fix = "https://sharemods.com/oym10hupewkz/pbmcf.scs.html"
+    Project_Balkans = "https://sharemods.com/pu4jppefonhz/Project_Balkans_5.1.zip.html"
+    MK_rework_PL_rebuilding_fix = "https://sharemods.com/1a3zjludokh2/MKrework_PLRebuild_fix.scs.html"
+    North_Macedonia_rework = "https://sharemods.com/l9328ipjmp91/N.Macedonia_rework_1.4.3.zip.html"
+    Poland_rebuilding = "https://sharemods.com/85ytwbkx55hp/PL_Rebuilding_2.5.2_all.7z.html"
+    Israel-Lebanon_open_border = "https://drive.google.com/file/d/15VoRh4POt8Dz0tzYKMgY7CQneCM10Q1B/view"
+    Maghreb_map = ["https://sharemods.com/yyaf1ten9zfh/MaghrebMap_Def_01_Beta_hotfix.scs.html", "https://sharemods.com/17wvd550h22r/MaghrebMap_Def_01_Beta.scs.html", "https://sharemods.com/uy8m658cyk1w/MaghrebMap_Model1_01_Beta.scs.html", "https://sharemods.com/myhl2foyul0y/MaghrebMap_Model2_01_Beta.scs.html", "https://sharemods.com/jmmoggohkyco/MaghrebMap_Model3_01_Beta.scs.html"]
+    ProMods_Middle_East = "$!%https://www.promods.net/setup.php?game=me"
+    Corfu_and_the_Greek_Islands = "$https://terramaps.net/download/view.php?game=corfu"
+    ProMods = "$!%https://www.promods.net/setup.php?game=ets"
+    Volga_map = ["https://sharemods.com/tq54hmm47mfl/Volga_def_map.scs.html", "https://sharemods.com/l9drkw2kpurs/Volga_model.scs.html"]
+    Southern_Region_hotfix = "https://sharemods.com/oqaim3knpuq8/hotfix_22.07.21.zip.html"
+    Southern_Region = "https://sharemods.com/wxhm5k2shg3y/SRmap_v10_5.7z.html"
+    Sibir_map_caps_fix = "https://sharemods.com/fwv3iofevj7a/SibirCapsFix.scs.html"
+    Sibir_map_timezone_fix = "https://sharemods.com/an3qgm63yvi2/sibir_timezone_fix.scs.html"
+    Sibir_map = ["https://sharemods.com/cbyrcusu1esc/sibirmap2.1.2b.mapdef.scs.html", "https://sharemods.com/1t0du9tw39dp/sibirmap2.1.2b.model.scs.html"]
+    Road_to_Asia = "$https://terramaps.net/download/view.php?game=road-to-asia"
+    Road_to_Aral_caps_fix = "https://sharemods.com/msu8l0lq9vdk/blazingcreeperx.RtAral_caps_fix.scs.html"
+    Road_to_Aral = "https://sharemods.com/yac61jvz80d4/blazingcreeperx.Road_to_Aral_2.0.scs.html"
+    The_Great_Steppe = ["https://sharemods.com/tddscfu85ddv/The_Great_Steppe_v2.0.zip.html", "https://sharemods.com/53dq8u1k8b2i/The_Great_Steppe_v2.0.z01.html", "https://sharemods.com/2yuzcjchx0kc/The_Great_Steppe_v2.0.z02.html"]
+    AfroMap = "https://drive.google.com/file/d/1ZzjMp23ISTn0oMIqVQU9ALl4EUgsk-R8/view"
+    Java_Road_Revolution_defmap_fix = "https://www.mediafire.com/file/833c4dz6xg713hb/JRR_v0.3_FIX_LicensePlate_01.7z/file"
+    Java_Road_Revolution = "https://www.mediafire.com/file/6f7v50q7lyxtxc2/JRR+v0.3+1.41.7z/file"
+    PJ_Indo_map = "https://sharemods.com/to2xqjaxgc0z/PJ_Map_v2.71.7z.html"
